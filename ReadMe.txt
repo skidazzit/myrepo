@@ -5,6 +5,6 @@ The goal of this project is to create a script that would automatically execute 
   -install and enable Apache
   -install and enable Nginx
   -install and enable Netstat
-  -create status update file called "installation-status.txt" in user home folder. this file should contain installing status of all the above programs. 
+  -create status update file called "installation-status.txt" in user home folder. This file should contain installing status of all the above programs. 
   
   
