@@ -1,8 +1,8 @@
 The goal of this project is to create a script that would automatically execute the below commands
-  -update and upgrade current packages
-  -install dnf package manager
-  -install and enable Firewalld
-  -install and enable Openssh
+  -update and upgrade current packages (completed)
+  -install dnf package manager (completed)
+  -install and enable Firewalld (completed)
+  -install and enable Openssh 
   -install and enable Apache
   -install and enable Netstat
   -install and enable Nginx
