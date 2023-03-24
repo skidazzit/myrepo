@@ -1,0 +1,19 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: update repository index
+    yum: 
+      update_cache: yes
+
+  - name: install httpd package
+    yum:
+      name: httpd
+      state: absent
+
+  - name: install firewalld package
+    yum:
+      name: firewalld
+      state: latest 
