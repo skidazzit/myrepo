@@ -1,6 +1,6 @@
 ---
 - name: Uninstall httpd
-  hosts: your_server
+  hosts: Production 
   become: true
   tasks:
     - name: Stop httpd service
