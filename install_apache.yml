@@ -1,17 +1,16 @@
 ---
+- name: Install Apache HTTP Server (httpd)
+  hosts: Production
+  become: yes
 
-- hosts: all
-  become: true
   tasks:
-
-  - name: update repository index
-    yum: 
-      update_cache: yes
-
-  - name: install httpd package
+  - name: Install httpd package
     yum:
       name: httpd
+      state: present
 
-  - name: install firewalld package
-    yum:
-      name: firewalld 
+  - name: Start and enable httpd service
+    service:
+      name: httpd
+      state: started
+      enabled: yes

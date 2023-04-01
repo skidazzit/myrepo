@@ -1,19 +1,13 @@
 ---
-
-- hosts: all
+- name: Uninstall httpd
+  hosts: your_server
   become: true
   tasks:
-
-  - name: update repository index
-    yum: 
-      update_cache: yes
-
-  - name: install httpd package
-    yum:
-      name: httpd
-      state: absent
-
-  - name: install firewalld package
-    yum:
-      name: firewalld
-      state: latest 
+    - name: Stop httpd service
+      service:
+        name: httpd
+        state: stopped
+    - name: Remove httpd package
+      yum:
+        name: httpd
+        state: absent
